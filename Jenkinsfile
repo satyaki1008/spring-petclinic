@@ -13,11 +13,5 @@ pipeline {
         sh 'mvn clean install'
       }
     } 
-stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t satyaki1008/spring-petclinic-docker:latest .'
-      }
-    }
   }
 }
